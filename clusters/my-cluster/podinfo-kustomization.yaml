@@ -5,6 +5,11 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
+  patches:
+    - patch: |
+        - op: replace
+          path: /metadata/name
+          value: test
   interval: 5m0s
   path: ./kustomize
   prune: true
